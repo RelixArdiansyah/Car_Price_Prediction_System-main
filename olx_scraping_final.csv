@@ -1,0 +1,49 @@
+;Company;Name;Year;kms_driven;kms_drivenn;harga;fuel_type
+0;Honda;Supra;2002;5000;5000;3200000;bensin
+1;Honda;Vario;2010;6000;6000;4200000;bensin
+2;Honda;Vario;2010;5000;5000;4200000;bensin
+3;Yamaha;Vega R;2005;30000;30000;3500000;bensin
+4;Honda;Supra;2007;15000;15000;5750000;bensin
+5;Honda;Supra;2007;30000;30000;5750000;bensin
+6;Yamaha;Xeon;2011;45000;45000;5850000;bensin
+7;Yamaha;Mio;2009;5000;5000;5800000;bensin
+8;Honda;Vario;2010;5000;5000;4200000;bensin
+9;Honda;Vario;2010;5000;5000;4200000;bensin
+10;Honda;Supra;1991;300000;300000;4800000;bensin
+11;Yamaha;Vega R;2004;5000;5000;5000000;bensin
+12;Yamaha;Mio;2008;15000;15000;4200000;bensin
+13;Yamaha;Vega R;2008;90000;90000;3800000;bensin
+14;Suzuki;Shooter;2014;5000;5000;5750000;bensin
+15;Suzuki;Shogun;2005;300000;300000;4300000;bensin
+16;Honda;Astrea;1996;300000;300000;5000000;bensin
+17;Honda;kharisma;2004;20000;20000;4000000;bensin
+18;Honda;CB 150R;2015;80000;80000;4500000;bensin
+19;Suzuki;Shogun;2002;105000;105000;4000000;bensin
+20;Honda;Supra;2004;55000;55000;5000000;bensin
+21;Yamaha;Mio;2009;100000;100000;4900000;bensin
+22;Yamaha;Jupiter;2001;40000;40000;4000000;bensin
+23;Honda;Vario;2010;5000;5000;4200000;bensin
+24;Yamaha;Mio;2011;25000;25000;5950000;bensin
+25;Yamaha;Mio;2008;60000;60000;5000000;bensin
+26;Honda;Vario;2008;85000;85000;5000000;bensin
+27;Yamaha;Nuovo;2005;25000;25000;3000000;bensin
+28;Yamaha;Mio;2014;35000;35000;5500000;bensin
+29;Winifly;Lain-lain;2023;5000;5000;5000000;listrik
+30;Goda;Lain-lain;2023;40000;40000;3500000;listrik
+31;Genio;Lain-lain;2023;5000;5000;3500000;listrik
+32;Alva;Lain-lain;2023;5000;5000;3000000;listrik
+33;Uwinifly;Lain-lain;2023;5000;5000;5250000;listrik
+34;Exsotik;Lain-lain;2023;5000;5000;3750000;listrik
+35;Goda;Lain-lain;2022;15000;15000;700000;listrik
+36;Selis;Lain-lain;2022;5000;5000;5000000;listrik
+37;Yadea;Lain-lain;2023;10000;10000;500000;listrik
+38;Smoot;Lain-lain;2024;5000;5000;5000000;listrik
+39;Uwinifly;Lain-lain;2023;45000;45000;4100000;listrik
+40;Selis;Lain-lain;2023;5000;5000;5000000;listrik
+41;Genio;Lain-lain;2023;45000;45000;4900000;listrik
+42;Voxa;Lain-lain;2023;45000;45000;3300000;listrik
+43;Volta;Lain-lain;2021;5000;5000;4000000;listrik
+44;Uwinifly;Lain-lain;2017;5000;5000;1500000;listrik
+45;Uwinifly;Lain-lain;2022;5000;5000;2950000;listrik
+46;Smoot;Lain-lain;2020;5000;5000;2500000;listrik
+47;Smoot;Lain-lain;2023;5000;5000;3000000;listrik
