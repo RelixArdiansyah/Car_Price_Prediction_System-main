@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta Name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', fileName='style/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Car Price Predictor</title>
+</head>
+<body id="bg">
+    <section class="sect">
+        <h1 class="head">Car Price Prediction System</h1>
+        <p class="text">This app predicts the price of a car you want to sell. Try filling the details below:</p>
+        <div id="container">
+            <form id="form" method="post" accept-charset="utf-8" Name="form">
+                <div class="card">
+                    <label for="Company"><b>Select The Company: </b></label><br>
+                    <select class="select" Name="company" id="company"
+                        onchange="load_motor_models(this.id,'motor_models')">
+                        {% for Company in companies %}
+                        <option value="{{ company }}">{{ Company }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="card">
+                    <label for="model"><b>Select The Model: </b></label><br>
+                    <select class="select" Name="motor_models" id="motor_models"></select>
+                </div>
+                <div class="card">
+                    <label for="year"><b>Select Year of Purchase: </b></label><br>
+                    <select class="select" Name="year" id="year">
+                        {% for Year in Years %}
+                            <option value="{{ year }}">{{ Year }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="card">
+                    <label for="fuel"><b>Fuel Type: </b></label><br>
+                    <select class="select" Name="fuel" id="fuel">
+                        {% for fuel in fuel_types %}
+                            <option value="{{ fuel }}">{{ fuel }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="card">
+                    <label for="kilo"><b>No. of Kilometrs Driven: </b></label><br>
+                    <input type="text" class="select" Name="kilo" id="kilo" placeholder="N kms">
+                </div>
+                <button class="btn" onclick="send_data()">Predict Price</button>
+            </form>
+            <div class="card">
+                <b>
+                <span id="prediction"></span>
+                </b>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        function load_motor_models(company_id,motor_model_id)
+        {
+            var company=document.getElementById(company_id);
+            var motor_model= document.getElementById(motor_model_id);
+            console.log(company.value);
+            motor_model.value="";
+            motor_model.innerHTML="";
+            {% for company in companies %}
+                if( company.value == "{{ company }}")
+                {
+                    {% for model in motor_models %}
+                        {% if company in model %}
+    
+                            var newOption= document.createElement("option");
+                            newOption.value="{{ model }}";
+                            newOption.innerHTML="{{ model }}";
+                            motor_model.options.add(newOption);
+                        {% endif %}
+                    {% endfor %}
+                }
+            {% endfor %}
+        }
+    
+        function form_handler(event) {
+            event.preventDefault(); // Don't submit the form normally
+        }
+        function send_data()
+        {
+            document.querySelector('form').addEventListener("submit",form_handler);
+    
+            var fd=new FormData(document.querySelector('form'));
+    
+            var xhr= new XMLHttpRequest({mozSystem: true});
+    
+            xhr.open('POST','/predict',true);
+            document.getElementById('prediction').innerHTML="Wait! Predicting Price.....";
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == XMLHttpRequest.DONE){
+                    document.getElementById('prediction').innerHTML="Price Prediction: ₹"+xhr.responseText;
+    
+                }
+            };
+    
+            xhr.onload= function(){};
+    
+            xhr.send(fd);
+        }
+    </script>
+    </body>
+    </html>
